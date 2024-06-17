@@ -1,5 +1,4 @@
 from os import getenv
-from random import choices
 from spotipy import Spotify
 from secrets import token_hex
 from spotipy.oauth2 import SpotifyOAuth
@@ -49,10 +48,10 @@ def get_all_playlist_track(id):
                 "image": track["track"]["album"]["images"][1]["url"]
             }
 
-@app.route("/")
-def index(): return render_template("index.html", playlists = list(get_all_playlists()))
+@app.get("/auth")
+def auth(): return render_template("index.html", playlists = list(get_all_playlists()))
 
-@app.route("/playlist/<id>")
+@app.get("/playlist/<id>")
 def playlist(id): return render_template("playlist.html", tracks = list(get_all_playlist_track(id)))
 
 @app.get("/robots.txt")
