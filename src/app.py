@@ -48,8 +48,11 @@ def get_all_playlist_track(id):
                 "image": track["track"]["album"]["images"][1]["url"]
             }
 
+@app.get("/")
+def index(): return render_template("index.html")
+
 @app.get("/auth")
-def auth(): return render_template("index.html", playlists = list(get_all_playlists()))
+def auth(): return render_template("auth.html", playlists = list(get_all_playlists()))
 
 @app.get("/playlist/<id>")
 def playlist(id): return render_template("playlist.html", tracks = list(get_all_playlist_track(id)))
