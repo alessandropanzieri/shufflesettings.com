@@ -69,4 +69,4 @@ def serve_file(): return send_file(f"app/{request.path}")
 @app.errorhandler(405)
 def error(_): return redirect("/")
 
-if __name__ == "__main__": app.run(debug = True)
+if __name__ == "__main__": app.run()
