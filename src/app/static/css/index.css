@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxygen&family=Protest+Strike&display=swap");
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    cursor: pointer;
+    background: rgb(240, 240, 240);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(200, 200, 200);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    cursor: grabbing;
+    background-color: rgb(25, 20, 20);
+}
+
+html,
+body,
+main {
+    margin: 0;
+    user-select: none;
+    background-color: rgb(29, 185, 84);
+    -webkit-tap-highlight-color: transparent;
+}
+
+main {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main header {
+    gap: 10px;
+    display: flex;
+    margin: 30px 0;
+    align-items: center;
+    justify-content: center;
+}
+
+#logo {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgb(25, 20, 20);
+}
+
+main header div h2,
+main header div h4 {
+    margin: 0;
+    font-family: "Oxygen", sans-serif;
+}
+
+main header div h2 {
+    margin-bottom: 2.5px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 5px rgb(25, 20, 20);
+}
+
+main header div h4  {
+    padding: 2.5px 10px;
+    border-radius: 5px;
+    color: rgb(25, 20, 20);
+    border-width: 5px;
+    box-shadow: 0 0 5px rgb(25, 20, 20);
+    background-color: rgb(200, 200, 200);
+}
+
+main ol {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.playlist {
+    gap: 10px;
+    margin: 10px;
+    padding: 20px;
+    display: flex;
+    cursor: pointer;
+    border-radius: 10px;
+    align-items: flex-start;
+    background-color: rgb(25, 20, 20);
+    box-shadow: 0 0 5px rgb(25, 20, 20);
+}
+
+.playlist:hover {
+    transform: scale(1.015);
+}
+
+.playlist_cover {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgb(25, 20, 20);
+}
+
+.playlist_name {
+    margin: 0;
+    padding-top: 10px;
+    color: rgb(255, 255, 255);
+    font-family: "Oxygen", sans-serif;
+}
+
+#shadow {
+    left: 0;
+    right: 0;
+    height: 20px;
+    bottom: -20px;
+    position: fixed;
+    box-shadow: 0 0 20px rgb(0, 0, 0);
+}

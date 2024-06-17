@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <title>ShuffleSettings</title>
+        <meta name = "theme-color" content = "#1DB954">
+        <link rel = "icon" href = "../static/assets/favicon.ico">
+        <link rel = "stylesheet" href = "../static/css/min/playlist.min.css">
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1, user-scalable = 0">
+        <script src = "https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+        <script> "serviceWorker" in navigator ? navigator.serviceWorker.register("/service-worker.js") : null </script>
+    </head>
+    <body oncontextmenu = "return false">
+        <main>
+            {% for track in tracks %}
+                <ol>
+                    <li class = "track" id = "{{ track.id }}">
+                        <img class = "track_image" src = "{{ track.image }}" alt = "track">
+                        <div>
+                            <h3 class = "track_name">{{ track.name }}</h3>
+                            <h4 class = "track_artist">{{ track.artist }}</h4>
+                        </div>
+                    </li>
+                </ol>
+            {% endfor %}
+            <div id = "shadow"></div>
+        </main>
+        <script src = "../static/js/min/playlist.min.js" charset = "UTF-8"></script>
+    </body>
+</html>

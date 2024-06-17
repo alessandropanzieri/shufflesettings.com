@@ -1,0 +1,5 @@
+Allow: /
+User-agent: *
+
+Sitemap: https://shufflesettings.com/sitemap.xml
+Sitemap: https://www.shufflesettings.com/sitemap.xml

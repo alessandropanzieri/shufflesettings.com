@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <title>ShuffleSettings</title>
+        <meta name = "theme-color" content = "#1DB954">
+        <link rel = "manifest" href = "/manifest.json">
+        <meta name = "author" content = "Alessandro Panzieri">
+        <link rel = "icon" href = "../static/assets/favicon.ico">
+        <link rel = "canonical" href = "https://shufflesettings.com/">
+        <link rel = "stylesheet" href = "../static/css/min/index.min.css">
+        <meta name = "description" content = "">
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1, user-scalable = 0">
+        <script src = "https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+        <script> "serviceWorker" in navigator ? navigator.serviceWorker.register("/service-worker.js") : null </script>
+    </head>
+    <body oncontextmenu = "return false">
+        <main>
+            <header>
+                <img id = "logo" src = "../static/assets/favicon.ico" alt = "logo">
+                <div>
+                    <h2>ShuffleSettings.com</h2>
+                    <h4>Customize Spotify shuffle on needs</h4>
+                </div>
+            </header>
+            {% for playlist in playlists %}
+                <ol>
+                    <li class = "playlist" id = "{{ playlist.id }}">
+                        <img class = "playlist_cover" src = "{{ playlist.image }}" alt = "playlist">
+                        <h2 class = "playlist_name">{{ playlist.name }}</h2>
+                    </li>
+                </ol>
+            {% endfor %}
+            <div id = "shadow"></div>
+        </main>
+        <script src = "../static/js/min/index.min.js" charset = "UTF-8"></script>
+    </body>
+</html>
