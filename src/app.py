@@ -2,11 +2,8 @@ from os import getenv
 from random import choices
 from spotipy import Spotify
 from secrets import token_hex
-from dotenv import load_dotenv
 from spotipy.oauth2 import SpotifyOAuth
 from flask import Flask, request, redirect, send_file, render_template
-
-load_dotenv()
 
 app = Flask(__name__, template_folder = "app/templates", static_folder = "app/static")
 app.secret_key = token_hex(16)
