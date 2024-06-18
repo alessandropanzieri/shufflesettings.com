@@ -51,11 +51,11 @@ def get_all_playlist_track(id):
 @app.get("/")
 def index(): return render_template("index.html")
 
-@app.get("/auth")
-def auth(): return render_template("auth.html", playlists = list(get_all_playlists()))
+@app.get("/playlists")
+def playlists(): return render_template("playlists.html", playlists = list(get_all_playlists()))
 
 @app.get("/playlist/<id>")
-def playlist(id): return render_template("playlist.html", tracks = list(get_all_playlist_track(id)))
+def tracks(id): return render_template("tracks.html", tracks = list(get_all_playlist_track(id)))
 
 @app.get("/robots.txt")
 @app.get("/sitemap.xml")

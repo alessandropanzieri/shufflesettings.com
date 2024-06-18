@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxygen&family=Protest+Strike&display=swap");
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    cursor: pointer;
+    background: rgb(240, 240, 240);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(200, 200, 200);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    cursor: grabbing;
+    background-color: rgb(25, 20, 20);
+}
+
+html,
+body,
+main {
+    margin: 0;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+main {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
